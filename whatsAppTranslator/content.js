@@ -22,8 +22,8 @@
         );
         messages.forEach((msg) => {
             const text = msg.innerText.trim();
-            if (text && !seen.has(text)) {
-                seen.add(text);
+            if (text && !seen.has(msg)) {
+                seen.add(msg);
                 sendToFlask(text, msg);
             }
         });
